@@ -4,6 +4,7 @@ const register_input = document.getElementById('register');
 const addPlayerBtn = document.getElementById('addPlayer');
 const registerBtn = document.getElementById('registerButton');
 const generateBtn = document.getElementById('generateButton');
+const clearListBtn = document.getElementById('clearList');
 const playerList = document.getElementById('player-list');
 const result = document.getElementById('result');
 
@@ -23,7 +24,7 @@ const registerPlayer = () => {
 const refreshPlayList = (array) => {
 	let lists = "";
 	if (array.length < 1) {
-		lists += `<li class="player">No player added. Add 4 or more to play.</li>`;
+		lists += `<li class="player">No players. Add 4 or more to begin.</li>`;
 	}
 	array.forEach((item, index) => {
 		lists += `<li class="player">${index + 1}. ${item}</li>`;
@@ -74,6 +75,8 @@ const getRandomPlayer = (array) => {
 addPlayerBtn.addEventListener('click', registerPlayer);
 
 registerBtn.addEventListener('click', savePlayers);
+
+clearListBtn.addEventListener('click', clearPlayers);
 
 generateBtn.addEventListener('click', () => {
 	getRandomPlayer(player_array);

@@ -32,16 +32,12 @@ button {
 }
 
 .player-list h2 {
+	text-align: center;
 	margin: 20px 0;
 }
 
 ul {
 	list-style: none;
-}
-
-.row {
-	display: flex;
-	flex-direction: row;
 }
 
 .controls {
@@ -52,10 +48,12 @@ ul {
 	margin-top: 20px;
 	text-align: center;
 }
-#clearList{
+
+#clearList {
 	display: block;
-	margin-top: 40%;
+	margin-top: 30px;
 }
+
 #result {
 	font-size: 2em;
 	font-weight: 700;
@@ -70,6 +68,7 @@ ul {
 	}
 
 	.row {
+		display: flex;
 		flex-direction: column;
 	}
 
@@ -77,6 +76,10 @@ ul {
 		margin-top: 40px;
 		justify-content: center;
 		align-items: center;
+	}
+
+	#clearList {
+		margin-top: 40%;
 	}
 
 }
