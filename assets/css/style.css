@@ -52,7 +52,10 @@ ul {
 	margin-top: 20px;
 	text-align: center;
 }
-
+#clearList{
+	display: block;
+	margin-top: 40%;
+}
 #result {
 	font-size: 2em;
 	font-weight: 700;
