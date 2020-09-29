@@ -22,14 +22,23 @@ const registerPlayer = () => {
 
 const refreshPlayList = (array) => {
 	let lists = "";
+	if (array.length < 1) {
+		lists += `<li class="player">No player added. Add 4 or more to play.</li>`;
+	}
 	array.forEach((item, index) => {
-		lists += `<li class="player">${index + 1}. ${item}</li>`
+		lists += `<li class="player">${index + 1}. ${item}</li>`;
 	});
 	playerList.innerHTML = lists;
 };
 
-const startGame = () => {
+const savePlayers = () => {
 	localStorage.setItem('latest-list', JSON.stringify(player_array));
+};
+
+const clearPlayers = () => {
+	localStorage.removeItem('latest-list');
+	player_array = [];
+	refreshPlayList(player_array);
 };
 
 const getSavedList = () => {
@@ -64,7 +73,7 @@ const getRandomPlayer = (array) => {
 
 addPlayerBtn.addEventListener('click', registerPlayer);
 
-registerBtn.addEventListener('click', startGame);
+registerBtn.addEventListener('click', savePlayers);
 
 generateBtn.addEventListener('click', () => {
 	getRandomPlayer(player_array);

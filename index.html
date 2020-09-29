@@ -11,26 +11,32 @@
 <body>
 	<main>
 		<header>
-			<h1>Generate Randoms</h1>
+			<h1 class="container">Generate Randoms</h1>
 		</header>
 
-		<div>
-			<input type="text" name="register" id="register" placeholder="Register Player">
-			<button type="button" id="addPlayer">Add</button>
+		<div class="container row">
+			<div class="input">
+				<input type="text" name="register" id="register" placeholder="Register Player">
+				<button type="button" id="addPlayer">Add</button>
+			</div>
 
 			<div class="player-list">
+				<h2>Players</h2>
 				<ul id="player-list">
 					<li>No Players. Add 4 or more to begin</li>
 				</ul>
 			</div>
 
-			<button type="button" id="registerButton">Save Players</button>
-			<button type="button" id="generateButton">Generate</button>
+			<div class="controls">
+				<button type="button" id="registerButton">Save</button>
+				<button type="button" id="generateButton">Generate</button>
+			</div>
 
-			<div>Your players are: <span id="result"></span></div>
+			<div class="declare">Your players are: <div id="result"></div></div>
 		</div>
 	</main>
 	<!-- <script src="./assets/js/functions.js"></script> -->
 	<script src="./assets/js/main.js"></script>
 </body>
+
 </html>
