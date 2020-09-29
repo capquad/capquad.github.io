@@ -11,7 +11,7 @@
   "author": "Craig Shoemaker <craig@craigshoemaker.net>",
   "license": "MIT",
   "dependencies": {
-    "http-server": "^0.11.1",
+    "http-server": "^0.12.3",
     "ws": "^6.2.0"
   }
 }
